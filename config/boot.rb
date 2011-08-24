@@ -1,5 +1,8 @@
 require 'rubygems'
 
+# Invalid gemspec - invalid date format - next two lines added to avoid that.
+require 'yaml'
+YAML::ENGINE.yamler = 'syck'
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
 
